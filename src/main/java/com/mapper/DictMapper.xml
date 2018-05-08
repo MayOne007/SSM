@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.DictMapper">
+  <resultMap id="BaseResultMap" type="com.entity.Dict">
+    <id column="N_ID" jdbcType="INTEGER" property="id" />
+    <result column="C_KEY" jdbcType="VARCHAR" property="key" />
+    <result column="C_PARENTKEY" jdbcType="VARCHAR" property="parentkey" />
+    <result column="N_SORT" jdbcType="INTEGER" property="sort" />
+    <result column="C_VALUE" jdbcType="VARCHAR" property="value" />
+  </resultMap>
+  
+
+ <!--  <sql id="Base_Column_List">
+    N_ID, C_KEY, C_PARENTKEY, N_SORT, C_VALUE
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_dict
+    where N_ID = #{nId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_dict
+    where N_ID = #{nId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.entity.Dict">
+    insert into t_dict (N_ID, C_KEY, C_PARENTKEY, 
+      N_SORT, C_VALUE)
+    values (#{nId,jdbcType=INTEGER}, #{cKey,jdbcType=VARCHAR}, #{cParentkey,jdbcType=VARCHAR}, 
+      #{nSort,jdbcType=INTEGER}, #{cValue,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.entity.Dict">
+    insert into t_dict
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="nId != null">
+        N_ID,
+      </if>
+      <if test="cKey != null">
+        C_KEY,
+      </if>
+      <if test="cParentkey != null">
+        C_PARENTKEY,
+      </if>
+      <if test="nSort != null">
+        N_SORT,
+      </if>
+      <if test="cValue != null">
+        C_VALUE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="nId != null">
+        #{nId,jdbcType=INTEGER},
+      </if>
+      <if test="cKey != null">
+        #{cKey,jdbcType=VARCHAR},
+      </if>
+      <if test="cParentkey != null">
+        #{cParentkey,jdbcType=VARCHAR},
+      </if>
+      <if test="nSort != null">
+        #{nSort,jdbcType=INTEGER},
+      </if>
+      <if test="cValue != null">
+        #{cValue,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.entity.Dict">
+    update t_dict
+    <set>
+      <if test="cKey != null">
+        C_KEY = #{cKey,jdbcType=VARCHAR},
+      </if>
+      <if test="cParentkey != null">
+        C_PARENTKEY = #{cParentkey,jdbcType=VARCHAR},
+      </if>
+      <if test="nSort != null">
+        N_SORT = #{nSort,jdbcType=INTEGER},
+      </if>
+      <if test="cValue != null">
+        C_VALUE = #{cValue,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where N_ID = #{nId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.entity.Dict">
+    update t_dict
+    set C_KEY = #{cKey,jdbcType=VARCHAR},
+      C_PARENTKEY = #{cParentkey,jdbcType=VARCHAR},
+      N_SORT = #{nSort,jdbcType=INTEGER},
+      C_VALUE = #{cValue,jdbcType=VARCHAR}
+    where N_ID = #{nId,jdbcType=INTEGER}
+  </update> -->
+</mapper>
